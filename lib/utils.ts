@@ -102,9 +102,9 @@ export async function deleteById(document: MongoosasticDocument, opt: DeleteById
 export function reformatESTotalNumber<T = unknown>(
   res: ApiResponse<SearchResponse<T>>
 ): ApiResponse<SearchResponse<T>> {
-  Object.assign(res.body.hits, {
-    total: (res.body.hits.total as SearchTotalHits).value,
-    extTotal: res.body.hits.total,
+  Object.assign(res.hits, {
+    total: (res.hits.total as SearchTotalHits).value,
+    extTotal: res.hits.total,
   })
   return res
 }
@@ -117,7 +117,7 @@ export async function hydrate(
   const options = model.esOptions()
 
   const clonedRes = res as ApiResponse<HydratedSearchResults>
-  const results = clonedRes.body.hits
+  const results = clonedRes.hits
 
   const resultsMap: Record<string, number> = {}
 
@@ -149,7 +149,7 @@ export async function hydrate(
   if (!docs || docs.length === 0) {
     results.hits = []
     results.hydrated = []
-    clonedRes.body.hits = results
+    clonedRes.hits = results
     return clonedRes
   }
 
@@ -183,7 +183,7 @@ export async function hydrate(
 
   results.hits = []
   results.hydrated = hits
-  clonedRes.body.hits = results
+  clonedRes.hits = results
 
   return clonedRes
 }
