@@ -2,7 +2,7 @@
   "author": "James R. Carr <james.r.carr@gmail.com> (http://blog.james-carr.org)",
   "name": "mongoosastic",
   "description": "A mongoose plugin that indexes models into elastic search",
-  "version": "5.0.0",
+  "version": "6.0.0",
   "tags": [
     "mongodb",
     "elasticsearch",
@@ -12,14 +12,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/mongoosastic/mongoosastic"
+    "url": "git://github.com/Nutribitapp/mongoosastic"
   },
   "main": "dist/index.js",
   "types": "index.d.ts",
   "dependencies": {
-    "@elastic/elasticsearch": "7.15.0",
+    "@elastic/elasticsearch": "8.6.0",
     "lodash": "4.17.21",
-    "mongoose": "6.0.13"
+    "mongoose": "7.0.1"
   },
   "devDependencies": {
     "@types/jest": "27.0.2",
