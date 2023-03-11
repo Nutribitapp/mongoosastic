@@ -130,3 +130,5 @@ dist
 
 # MkDocs build / site
 site/
+
+.npmrc

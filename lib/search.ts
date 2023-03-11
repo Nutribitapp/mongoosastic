@@ -47,6 +47,7 @@ export async function esSearch(
 
   Object.keys(opts).forEach((opt) => {
     if (!opt.match(/(hydrate|sort|aggs|highlight|suggest)/) && opts.hasOwnProperty(opt)) {
+      //@ts-ignore
       esQuery[opt as keyof Search] = opts[opt as keyof EsSearchOptions]
     }
   })
