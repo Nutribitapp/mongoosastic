@@ -1,6 +1,6 @@
 {
   "author": "James R. Carr <james.r.carr@gmail.com> (http://blog.james-carr.org)",
-  "name": "mongoosastic",
+  "name": "Nutribitapp/mongoosastic",
   "description": "A mongoose plugin that indexes models into elastic search",
   "version": "6.0.0",
   "tags": [
