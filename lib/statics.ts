@@ -94,7 +94,9 @@ export function synchronize(
     doc.on('es-filtered', onIndex)
 
     if (saveOnSynchronize) {
-      doc.save((err: unknown) => {
+      doc.save().then((resp: unknown) => {
+       // console.log(resp);
+      }).catch(function (err: unknown) {
         if (err) {
           counter--
           em.emit('error', err)
